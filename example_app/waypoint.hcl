@@ -83,4 +83,10 @@ app "release" {
       } 
     }
   }
+  // added because waypoint wouldn't initialize without it
+  deploy {
+    use "nomad" {
+      datacenter = "dc1"
+    }
+  }
 }

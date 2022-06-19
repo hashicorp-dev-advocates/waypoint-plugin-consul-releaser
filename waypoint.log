@@ -1,0 +1,229 @@
+warning: Warning! Default DB path will be used. This is at the path shown below.
+The server stores persistent data here so this file should be saved and
+consistent for every server run otherwise data loss will occur. It is
+recommended that you explicitly set the "-db" flag as acknowledgement of
+the importance of the DB file.
+
+
+» Server configuration:
+
+             DB Path: data.db
+        gRPC Address: 127.0.0.1:9701
+        HTTP Address: 127.0.0.1:9702
+       Auth Required: yes
+  Browser UI Enabled: yes
+         URL Service: api.waypoint.run:443 (account: guest)
+
+
+» Server logs:
+
+2022-06-19T08:52:05.030+0100 [INFO]  waypoint.server: starting built-in server: addr=127.0.0.1:9701
+2022-06-19T08:52:05.030+0100 [INFO]  waypoint.server.http: starting HTTP server: ln=127.0.0.1:9702 addr=127.0.0.1:9702
+2022-06-19T08:52:05.031+0100 [INFO]  waypoint.server.grpc: starting gRPC server: addr=127.0.0.1:9701
+2022-06-19T08:52:06.235+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo request
+2022-06-19T08:52:06.235+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo response: error=<nil> duration=183.7µs
+2022-06-19T08:52:06.237+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/BootstrapToken request
+2022-06-19T08:52:06.242+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/BootstrapToken response: error=<nil> duration=4.798337ms
+2022-06-19T08:52:06.320+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo request
+2022-06-19T08:52:06.320+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo response: error=<nil> duration=521.011µs
+2022-06-19T08:52:06.325+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T08:52:06.325+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error="rpc error: code = NotFound desc = record not found for ID: test" duration=605.825µs
+2022-06-19T08:52:06.326+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/UpsertProject request
+2022-06-19T08:52:06.329+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/UpsertProject response: error=<nil> duration=2.045866ms
+2022-06-19T08:53:08.747+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo request
+2022-06-19T08:53:08.747+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo response: error=<nil> duration=174.68µs
+2022-06-19T08:53:08.749+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T08:53:08.749+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error="rpc error: code = NotFound desc = record not found for ID: hashicraft" duration=117.69µs
+2022-06-19T08:53:24.022+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo request
+2022-06-19T08:53:24.022+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo response: error=<nil> duration=99.09µs
+2022-06-19T08:53:24.024+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T08:53:24.024+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=87.19µs
+2022-06-19T08:53:24.031+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig request
+2022-06-19T08:53:24.538+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T08:53:24.538+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XF7G9YC34303P7Z6VD7S0H
+2022-06-19T08:53:24.541+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob request
+2022-06-19T08:53:24.542+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob response: error=<nil> duration=1.883596ms
+2022-06-19T08:53:24.543+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream request
+2022-06-19T08:53:24.546+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T08:53:24.546+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner request
+2022-06-19T08:53:24.546+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner response: error=<nil> duration=58.56µs
+2022-06-19T08:53:24.546+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=151.23µs
+2022-06-19T08:53:24.553+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error=<nil> duration=15.499686ms
+2022-06-19T08:53:24.554+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream response: error=<nil> duration=10.545953ms
+2022-06-19T08:53:24.554+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T08:53:24.554+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XF7G9YC34303P7Z6VD7S0H
+2022-06-19T08:53:24.554+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error="context canceled" duration=512.145µs
+2022-06-19T08:53:24.554+0100 [WARN]  waypoint.server.grpc: unknown error from recvmsg: runner_id=01G5XF7G9YC34303P7Z6VD7S0H err="rpc error: code = Canceled desc = context canceled"
+2022-06-19T08:53:24.556+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig response: error="context canceled" duration=524.834233ms
+2022-06-19T08:53:35.147+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo request
+2022-06-19T08:53:35.147+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo response: error=<nil> duration=90.59µs
+2022-06-19T08:53:35.148+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T08:53:35.148+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=131.44µs
+2022-06-19T08:53:35.149+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig request
+2022-06-19T08:53:35.653+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T08:53:35.654+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob request
+2022-06-19T08:53:35.654+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XF7V5DCMYVBGK2W9GT012V
+2022-06-19T08:53:35.656+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob response: error=<nil> duration=1.99902ms
+2022-06-19T08:53:35.656+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream request
+2022-06-19T08:53:35.658+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner request
+2022-06-19T08:53:35.658+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner response: error=<nil> duration=64.38µs
+2022-06-19T08:53:35.658+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T08:53:35.658+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=38.73µs
+2022-06-19T08:53:35.663+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error=<nil> duration=9.996418ms
+2022-06-19T08:53:35.664+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream response: error=<nil> duration=7.634956ms
+2022-06-19T08:53:35.664+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T08:53:35.664+0100 [WARN]  waypoint.server.grpc: unknown error from recvmsg: runner_id=01G5XF7V5DCMYVBGK2W9GT012V err="rpc error: code = Canceled desc = context canceled"
+2022-06-19T08:53:35.665+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error="rpc error: code = Canceled desc = context canceled" duration=479.069µs
+2022-06-19T08:53:35.666+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig response: error="context canceled" duration=517.486775ms
+2022-06-19T08:56:20.346+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo request
+2022-06-19T08:56:20.346+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo response: error=<nil> duration=167.2µs
+2022-06-19T08:56:20.349+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T08:56:20.349+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=199.04µs
+2022-06-19T08:56:20.350+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig request
+2022-06-19T08:56:20.856+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T08:56:20.856+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XFCWFXR66892AHENSW62K6
+2022-06-19T08:56:20.857+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob request
+2022-06-19T08:56:20.864+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob response: error=<nil> duration=6.795272ms
+2022-06-19T08:56:20.864+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream request
+2022-06-19T08:56:20.866+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T08:56:20.866+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner request
+2022-06-19T08:56:20.866+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=112.12µs
+2022-06-19T08:56:20.866+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner response: error=<nil> duration=71.92µs
+2022-06-19T08:56:20.874+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error=<nil> duration=17.96938ms
+2022-06-19T08:56:20.874+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream response: error=<nil> duration=9.392588ms
+2022-06-19T08:56:20.874+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T08:56:20.874+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XFCWFXR66892AHENSW62K6
+2022-06-19T08:56:20.874+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error="context canceled" duration=283.685µs
+2022-06-19T08:56:20.874+0100 [WARN]  waypoint.server.grpc: unknown error from recvmsg: runner_id=01G5XFCWFXR66892AHENSW62K6 err="rpc error: code = Canceled desc = context canceled"
+2022-06-19T08:56:20.876+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig response: error="context canceled" duration=526.35421ms
+2022-06-19T08:56:33.932+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo request
+2022-06-19T08:56:33.932+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo response: error=<nil> duration=147.56µs
+2022-06-19T08:56:33.934+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T08:56:33.934+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=128.79µs
+2022-06-19T08:56:33.935+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig request
+2022-06-19T08:56:34.439+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T08:56:34.440+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XFD9REX875F4MDMY4X8HA4
+2022-06-19T08:56:34.440+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob request
+2022-06-19T08:56:34.442+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob response: error=<nil> duration=2.423203ms
+2022-06-19T08:56:34.442+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream request
+2022-06-19T08:56:34.445+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner request
+2022-06-19T08:56:34.445+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T08:56:34.445+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner response: error=<nil> duration=146.23µs
+2022-06-19T08:56:34.445+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=170.33µs
+2022-06-19T08:56:34.448+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetServerConfig request
+2022-06-19T08:56:34.448+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetServerConfig response: error=<nil> duration=130.27µs
+2022-06-19T08:56:34.491+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error=<nil> duration=52.15358ms
+2022-06-19T08:56:34.492+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream response: error=<nil> duration=49.173979ms
+2022-06-19T08:56:34.492+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T08:56:34.492+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XFD9REX875F4MDMY4X8HA4
+2022-06-19T08:56:34.492+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error="context canceled" duration=251.251µs
+2022-06-19T08:56:34.492+0100 [WARN]  waypoint.server.grpc: unknown error from recvmsg: runner_id=01G5XFD9REX875F4MDMY4X8HA4 err="rpc error: code = Canceled desc = context canceled"
+2022-06-19T08:56:34.494+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig response: error="context canceled" duration=559.323217ms
+2022-06-19T12:20:15.646+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo request
+2022-06-19T12:20:15.647+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo response: error=<nil> duration=1.036131ms
+2022-06-19T12:20:15.653+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T12:20:15.654+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=1.189591ms
+2022-06-19T12:20:15.656+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig request
+2022-06-19T12:20:16.163+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T12:20:16.164+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XV29177S18TVZEWW6P31QR
+2022-06-19T12:20:16.164+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob request
+2022-06-19T12:20:16.167+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob response: error=<nil> duration=2.561513ms
+2022-06-19T12:20:16.168+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream request
+2022-06-19T12:20:16.170+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T12:20:16.170+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner request
+2022-06-19T12:20:16.170+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=126.49µs
+2022-06-19T12:20:16.170+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner response: error=<nil> duration=97.5µs
+2022-06-19T12:20:16.172+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetServerConfig request
+2022-06-19T12:20:16.173+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetServerConfig response: error=<nil> duration=267.88µs
+2022-06-19T12:20:16.209+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error=<nil> duration=45.627379ms
+2022-06-19T12:20:16.209+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream response: error=<nil> duration=41.58909ms
+2022-06-19T12:20:16.210+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T12:20:16.210+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XV29177S18TVZEWW6P31QR
+2022-06-19T12:20:16.210+0100 [WARN]  waypoint.server.grpc: unknown error from recvmsg: runner_id=01G5XV29177S18TVZEWW6P31QR err="rpc error: code = Canceled desc = context canceled"
+2022-06-19T12:20:16.210+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error="context canceled" duration=443.465µs
+2022-06-19T12:20:16.212+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig response: error="context canceled" duration=556.310044ms
+2022-06-19T12:21:35.624+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo request
+2022-06-19T12:21:35.625+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo response: error=<nil> duration=150.58µs
+2022-06-19T12:21:35.626+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T12:21:35.626+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=94.81µs
+2022-06-19T12:21:35.627+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig request
+2022-06-19T12:21:36.133+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T12:21:36.133+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XV4Q4BK7NX3QFC90ACC4GF
+2022-06-19T12:21:36.134+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob request
+2022-06-19T12:21:36.136+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob response: error=<nil> duration=2.588076ms
+2022-06-19T12:21:36.137+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream request
+2022-06-19T12:21:36.139+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner request
+2022-06-19T12:21:36.139+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T12:21:36.139+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner response: error=<nil> duration=123.31µs
+2022-06-19T12:21:36.139+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=92.47µs
+2022-06-19T12:21:36.140+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetServerConfig request
+2022-06-19T12:21:36.140+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetServerConfig response: error=<nil> duration=44.55µs
+2022-06-19T12:21:36.166+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/UpsertBuild request
+2022-06-19T12:21:36.168+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/UpsertBuild response: error=<nil> duration=2.400332ms
+2022-06-19T12:21:36.182+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/UpsertBuild request
+2022-06-19T12:21:36.184+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/UpsertBuild response: error=<nil> duration=2.000262ms
+2022-06-19T12:21:36.189+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error=<nil> duration=55.903861ms
+2022-06-19T12:21:36.189+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream response: error=<nil> duration=51.910161ms
+2022-06-19T12:21:36.189+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T12:21:36.189+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XV4Q4BK7NX3QFC90ACC4GF
+2022-06-19T12:21:36.189+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error="context canceled" duration=212.67µs
+2022-06-19T12:21:36.189+0100 [WARN]  waypoint.server.grpc: unknown error from recvmsg: runner_id=01G5XV4Q4BK7NX3QFC90ACC4GF err="rpc error: code = Canceled desc = context canceled"
+2022-06-19T12:21:36.191+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig response: error="context canceled" duration=563.921321ms
+2022-06-19T12:22:30.269+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo request
+2022-06-19T12:22:30.269+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo response: error=<nil> duration=97.13µs
+2022-06-19T12:22:30.270+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T12:22:30.271+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=136.77µs
+2022-06-19T12:22:30.271+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig request
+2022-06-19T12:22:30.776+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T12:22:30.777+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XV6CFZ49B6SRYJFJMRA21R
+2022-06-19T12:22:30.777+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob request
+2022-06-19T12:22:30.783+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob response: error=<nil> duration=6.566997ms
+2022-06-19T12:22:30.784+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream request
+2022-06-19T12:22:30.785+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner request
+2022-06-19T12:22:30.785+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T12:22:30.786+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=82.94µs
+2022-06-19T12:22:30.786+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner response: error=<nil> duration=156.74µs
+2022-06-19T12:22:30.788+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetServerConfig request
+2022-06-19T12:22:30.788+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetServerConfig response: error=<nil> duration=71.27µs
+2022-06-19T12:22:30.819+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/UpsertBuild request
+2022-06-19T12:22:30.821+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/UpsertBuild response: error=<nil> duration=2.133701ms
+2022-06-19T12:22:30.910+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/UpsertBuild request
+2022-06-19T12:22:30.912+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/UpsertBuild response: error=<nil> duration=1.918295ms
+2022-06-19T12:22:30.918+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error=<nil> duration=141.120009ms
+2022-06-19T12:22:30.918+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream response: error=<nil> duration=134.077303ms
+2022-06-19T12:22:30.918+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T12:22:30.918+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XV6CFZ49B6SRYJFJMRA21R
+2022-06-19T12:22:30.919+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJob request
+2022-06-19T12:22:30.919+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJob response: error=<nil> duration=78.09µs
+2022-06-19T12:22:30.920+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error="context canceled" duration=2.050301ms
+2022-06-19T12:22:30.920+0100 [WARN]  waypoint.server.grpc: unknown error from recvmsg: runner_id=01G5XV6CFZ49B6SRYJFJMRA21R err="rpc error: code = Canceled desc = context canceled"
+2022-06-19T12:22:30.922+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig response: error="context canceled" duration=650.708798ms
+2022-06-19T12:22:45.472+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo request
+2022-06-19T12:22:45.473+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetVersionInfo response: error=<nil> duration=94.44µs
+2022-06-19T12:22:45.474+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T12:22:45.474+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=104.92µs
+2022-06-19T12:22:45.475+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig request
+2022-06-19T12:22:45.985+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T12:22:45.985+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XV6VB3155TE0NCZQ9X741B
+2022-06-19T12:22:45.985+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob request
+2022-06-19T12:22:45.991+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/QueueJob response: error=<nil> duration=6.674087ms
+2022-06-19T12:22:45.992+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream request
+2022-06-19T12:22:45.995+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner request
+2022-06-19T12:22:45.995+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetRunner response: error=<nil> duration=98.86µs
+2022-06-19T12:22:45.995+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject request
+2022-06-19T12:22:45.995+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetProject response: error=<nil> duration=97.32µs
+2022-06-19T12:22:45.996+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetServerConfig request
+2022-06-19T12:22:45.996+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetServerConfig response: error=<nil> duration=47.14µs
+2022-06-19T12:22:46.024+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/UpsertBuild request
+2022-06-19T12:22:46.026+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/UpsertBuild response: error=<nil> duration=2.115743ms
+2022-06-19T12:22:46.068+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/UpsertBuild request
+2022-06-19T12:22:46.070+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/UpsertBuild response: error=<nil> duration=2.134461ms
+2022-06-19T12:22:46.075+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error=<nil> duration=90.448032ms
+2022-06-19T12:22:46.075+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJobStream response: error=<nil> duration=83.062879ms
+2022-06-19T12:22:46.075+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream request
+2022-06-19T12:22:46.076+0100 [INFO]  waypoint.server.grpc: waiting for job assignment: runner_id=01G5XV6VB3155TE0NCZQ9X741B
+2022-06-19T12:22:46.076+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJob request
+2022-06-19T12:22:46.076+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/GetJob response: error=<nil> duration=57.25µs
+2022-06-19T12:22:46.077+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerJobStream response: error="context canceled" duration=1.404991ms
+2022-06-19T12:22:46.077+0100 [WARN]  waypoint.server.grpc: unknown error from recvmsg: runner_id=01G5XV6VB3155TE0NCZQ9X741B err="rpc error: code = Canceled desc = context canceled"
+2022-06-19T12:22:46.079+0100 [INFO]  waypoint.server.grpc: /hashicorp.waypoint.Waypoint/RunnerConfig response: error="context canceled" duration=603.565124ms

@@ -1,0 +1,53 @@
+FROM golang:1.17-alpine3.15 as build
+
+# Install the Protocol Buffers compiler and Go plugin
+RUN apk add protobuf git make zip
+RUN go get github.com/golang/protobuf/protoc-gen-go \
+    google.golang.org/grpc/cmd/protoc-gen-go-grpc
+
+# Create the source folder
+RUN mkdir /go/plugin
+WORKDIR /go/plugin
+
+# Copy the source to the build folder
+COPY . /go/plugin
+
+RUN go build -o ./bin/waypoint-plugin-consul-releaser ./main.go 
+
+FROM alpine:latest as plugin-download
+
+ARG TARGETARCH
+
+RUN apk --no-cache add ca-certificates \
+      && update-ca-certificates
+  
+RUN wget --no-check-certificate \
+      https://github.com/hashicorp-dev-advocates/waypoint-plugin-noop/releases/download/v0.2.2/waypoint-plugin-noop_linux_${TARGETARCH}.zip && \
+      unzip waypoint-plugin-noop_linux_${TARGETARCH}.zip
+
+FROM hashicorp/waypoint-odr:latest
+SHELL ["/kaniko/bin/sh", "-c"]
+
+ENV HOME /root
+ENV USER root
+ENV PATH="${PATH}:/kaniko"
+ENV SSL_CERT_DIR=/kaniko/ssl/certs
+ENV DOCKER_CONFIG /kaniko/.docker/
+ENV XDG_CONFIG_HOME=/kaniko/.config/
+ENV TMPDIR /kaniko/tmp
+ENV container docker
+
+# Add certificates
+COPY --from=plugin-download /etc/ssl/certs/ca-certificates.crt /kaniko/ssl/certs/ca-certificates.crt  
+
+# Add custom plugins
+COPY --from=build /go/plugin/bin/waypoint-plugin-consul-releaser /kaniko/.config/waypoint/plugins/waypoint-consul-releaser
+COPY --from=plugin-download /waypoint-plugin-noop /kaniko/.config/waypoint/plugins/waypoint-plugin-noop
+
+# Add a startup command that can add any additional root certificiates to the store
+# this is useful for when you want to talk to servers such as docker registries using self
+# signed certificates
+COPY ./odr_startup.sh /kaniko/odr_startup.sh
+RUN chmod +x /kaniko/odr_startup.sh
+
+ENTRYPOINT ["/kaniko/odr_startup.sh"]

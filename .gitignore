@@ -1,1 +1,5 @@
- waypoint-restore.db.lock
+waypoint-restore.db.lock
+data.db
+bin
+releases
+.vscode

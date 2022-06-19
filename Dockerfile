@@ -13,7 +13,7 @@ WORKDIR /go/plugin
 COPY . /go/plugin
 
 # Build the plugin
-RUN chmod +x ./print_arch
+RUN chmod +x ./print_os
 RUN make all
 
 # Create the zipped binaries

@@ -25,11 +25,11 @@ jobs:
     - name: Upload a Build Artifact ARM64
       uses: actions/upload-artifact@v2.2.2
       with:
-        name: waypoint-plugin-${PLUGIN_NAME}_linux_arm64.zip
-        path: ./bin/waypoint-plugin-${PLUGIN_NAME}_linux_arm64.zip
+        name: artifacts.zip
+        path: ./bin/waypoint-plugin-consul-release-controller_linux_arm64.zip
 
     - name: Upload a Build Artifact AMD64
       uses: actions/upload-artifact@v2.2.2
       with:
-        name: waypoint-plugin-consul-release-controller_linux_arm64.zip
-        path: ./bin/waypoint-plugin-consul-release-controller_linux_arm64.zip
+        name: artifacts.zip
+        path: ./bin/waypoint-plugin-consul-release-controller_linux_amd64.zip

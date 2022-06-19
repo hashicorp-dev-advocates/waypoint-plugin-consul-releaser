@@ -39,6 +39,9 @@ build:
 	GOOS=linux GOARCH=arm64 CGO_ENABLED=0 go build -o ./bin/linux_arm64/waypoint-plugin-${PLUGIN_NAME} ./main.go 
 	GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o ./bin/linux_amd64/waypoint-plugin-${PLUGIN_NAME} ./main.go 
 
+	zip -j ./bin/waypoint-plugin-${PLUGIN_NAME}_linux_arm64.zip ./bin/linux_arm64/waypoint-plugin-${PLUGIN_NAME}
+	zip -j ./bin/waypoint-plugin-${PLUGIN_NAME}_linux_amd64.zip ./bin/linux_amd64/waypoint-plugin-${PLUGIN_NAME}
+
 # Install the plugin locally
 install: build
 	@echo ""

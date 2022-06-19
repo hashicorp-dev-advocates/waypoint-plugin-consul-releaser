@@ -34,7 +34,7 @@ An example configuration can be seen below
 waypoint runner profile set \
   -name=release-controller \
   -plugin-type=release-controller \
-  -env-var="RELEASE_CONTROLLER_ADDR=http://10.5.0.12:8080" \
+  -env-var="RELEASE_CONTROLLER_ADDR=http://10.5.0.12:8080/v1/releases" \
   -env-var="WAYPOINT_SERVER_ADDR=10.5.0.12:9701" \
   -env-var="WAYPOINT_SERVER_TLS=true" \
   -env-var="WAYPOINT_SERVER_TLS_SKIP_VERIFY=true" \
@@ -42,5 +42,5 @@ waypoint runner profile set \
 ```
 
 ```
-waypoint project apply -runner-profile=release-controller hashicraft
+waypoint project apply -runner-profile=release-controller test
 ```

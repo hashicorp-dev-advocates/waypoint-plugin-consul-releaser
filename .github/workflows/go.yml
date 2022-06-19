@@ -1,10 +1,8 @@
 name: Go
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  - push
+  - pull_request
 
 jobs:
 
@@ -19,7 +17,19 @@ jobs:
         go-version: 1.18
 
     - name: Build
-      run: go build -v ./...
+      run: make build
 
     - name: Test
       run: go test -v ./...
+
+    - name: Upload a Build Artifact ARM64
+      uses: actions/upload-artifact@v2.2.2
+      with:
+        name: waypoint-plugin-${PLUGIN_NAME}_linux_arm64.zip
+        path: ./bin/waypoint-plugin-${PLUGIN_NAME}_linux_arm64.zip
+
+    - name: Upload a Build Artifact AMD64
+      uses: actions/upload-artifact@v2.2.2
+      with:
+        name: waypoint-plugin-consul-release-controller_linux_arm64.zip
+        path: ./bin/waypoint-plugin-consul-release-controller_linux_arm64.zip
